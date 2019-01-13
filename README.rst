@@ -1,0 +1,95 @@
+Flask-Dance Example App: Multi-User Edition
+===========================================
+
+This repository provides an example of how to use `Flask-Dance`_ with
+multi-user support. This particular repository uses Twitter as an
+OAuth provider, and it wires together the following Flask extensions:
+
+* `Flask-Dance`_
+* `Flask-SQLAlchemy`_
+* `Flask-Login`_
+
+You can run this code locally, or deploy it to Heroku_ to test it out.
+
+|heroku-deploy|
+
+Local Installation
+``````````````````
+
+Step 1: Get OAuth credentials from Twitter
+-----------------------------------------
+Visit https://developer.twitter.com/en/apps to register an
+app on Twitter. You must set the application's authorization
+callback URL to ``http://127.0.0.1:5000/login/twitter/authorized``.
+
+Once you've registered your application on Twitter, Twitter will give you an
+app ID and app secret, which we'll use in step 4.
+
+Step 2: Install code and dependencies
+-------------------------------------
+Run the following commands on your computer::
+
+    git clone https://github.com/singingwolfboy/flask-dance-twitter-multi.git
+    cd flask-dance-twitter-multi
+    pyvenv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+
+These commands will clone this git repository onto your computer,
+create a `virtual environment`_ for this project, activate it, and install
+the dependencies listed in ``requirements.txt``.
+
+Step 3: Create the database
+---------------------------
+Since we're storing OAuth data in the SQLAlchemy backend, we need to
+create the database to hold that data. Fortunately, this project includes
+basic command line support, so doing so is pretty straightforward.
+Run this code::
+
+    flask createdb
+
+If it worked, you should see the message "Database tables created".
+
+Step 4: Set environment variables
+---------------------------------
+Many applications use `environment variables`_ for configuration, and
+Flask-Dance is no exception. You'll need to set the following environment
+variables:
+
+* ``TWITTER_OAUTH_APP_ID``: set this to the app ID you got from Twitter.
+* ``TWITTER_OAUTH_APP_SECRET``: set this to the app secret you got from Twitter.
+* ``OAUTHLIB_INSECURE_TRANSPORT``: set this to ``true``. This indicates that
+  you're doing local testing, and it's OK to use HTTP instead of HTTPS for
+  OAuth. You should only do this for local testing.
+  Do **not** set this in production! [`oauthlib docs`_]
+
+How you set these variables depends on your operating system. For Mac/Linux, you
+can use the `export`_ command. For Windows, you can use the `SET`_ command. If
+you don't want to worry about this, you can create a ``.env`` file with
+your environment variables, and use `foreman`_ to run your app. This repository
+has a ``.env.example`` file that you can copy.
+
+Step 5: Run your app and login with Twitter!
+--------------------------------------------
+If you're setting environment variables manually, run your app using the
+``flask`` command::
+
+    flask run
+
+If you're using a ``.env`` file for your environment variables, install `foreman`_
+and use that to run your app::
+
+    foreman start
+
+Then, go to http://localhost:5000/ to visit your app and log in with Twitter!
+
+.. _Flask: http://flask.pocoo.org/docs/
+.. _Flask-Dance: http://flask-dance.readthedocs.org/
+.. _Flask-SQLAlchemy: http://flask-sqlalchemy.pocoo.org/
+.. _Flask-Login: https://flask-login.readthedocs.io
+.. _Twitter: https://twitter.com/
+.. _Heroku: https://www.heroku.com/
+
+.. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
+   :target: https://heroku.com/deploy
+   :alt: Deploy to Heroku

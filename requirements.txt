@@ -1,0 +1,6 @@
+flask>=1.0
+flask-dance[sqla]
+flask-sqlalchemy
+flask-login
+blinker
+gunicorn
