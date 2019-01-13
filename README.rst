@@ -39,6 +39,12 @@ These commands will clone this git repository onto your computer,
 create a `virtual environment`_ for this project, activate it, and install
 the dependencies listed in ``requirements.txt``.
 
+Also note that if you have trouble installing ``psycopg2``, it's OK to
+skip it. That dependency is only needed if you are using PostgreSQL
+for your database, and if you're running locally, then you can use
+SQLite instead, which is simpler. SQLite is also the default option,
+so you don't need to reconfigure anything.
+
 Step 3: Create the database
 ---------------------------
 Since we're storing OAuth data in the SQLAlchemy backend, we need to
