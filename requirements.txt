@@ -3,7 +3,8 @@ flask-dance[sqla]
 flask-sqlalchemy
 flask-login
 blinker
-gunicorn
 
+# only if you're using a Procfile, such as on Heroku
+gunicorn
 # only if you're using PostgreSQL, such as on Heroku
 psycopg2
