@@ -31,7 +31,7 @@ Run the following commands on your computer::
 
     git clone https://github.com/singingwolfboy/flask-dance-twitter-multi.git
     cd flask-dance-twitter-multi
-    pyvenv venv
+    python3 -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
 
@@ -95,6 +95,13 @@ Then, go to http://localhost:5000/ to visit your app and log in with Twitter!
 .. _Flask-Login: https://flask-login.readthedocs.io
 .. _Twitter: https://twitter.com/
 .. _Heroku: https://www.heroku.com/
+.. _environment variables: https://en.wikipedia.org/wiki/Environment_variable
+.. _oauthlib docs: http://oauthlib.readthedocs.org/en/latest/oauth2/security.html#envvar-OAUTHLIB_INSECURE_TRANSPORT
+.. _export: http://ss64.com/bash/export.html
+.. _SET: http://ss64.com/nt/set.html
+.. _foreman: https://github.com/ddollar/foreman
+.. _virtual environment: https://docs.python.org/3.7/library/venv.html
+.. _Fork this GitHub repo: https://help.github.com/articles/fork-a-repo/
 
 .. |heroku-deploy| image:: https://www.herokucdn.com/deploy/button.png
    :target: https://heroku.com/deploy
