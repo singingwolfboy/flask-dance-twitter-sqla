@@ -1,8 +1,8 @@
-Flask-Dance Example App: Multi-User Edition
-===========================================
+Flask-Dance Example App: Twitter SQLAlchemy Edition
+===================================================
 
 This repository provides an example of how to use `Flask-Dance`_ with
-multi-user support. This particular repository uses Twitter as an
+a SQLAlchemy storage. This particular repository uses Twitter as an
 OAuth provider, and it wires together the following Flask extensions:
 
 * `Flask-Dance`_
@@ -17,7 +17,7 @@ Local Installation
 ``````````````````
 
 Step 1: Get OAuth credentials from Twitter
------------------------------------------
+------------------------------------------
 Visit https://developer.twitter.com/en/apps to register an
 app on Twitter. You must set the application's authorization
 callback URL to ``http://127.0.0.1:5000/login/twitter/authorized``.

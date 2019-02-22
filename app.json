@@ -1,11 +1,11 @@
 {
-  "name": "Flask-Dance with Twitter, Multiple Accounts",
-  "description": "Testing Flask-Dance's OAuth integration with Twitter using multiple accounts",
+  "name": "Flask-Dance with Twitter & SQLAlchemy",
+  "description": "Testing Flask-Dance's OAuth integration with Twitter using SQLAlchemy",
   "keywords": [
     "oauth"
   ],
-  "website": "https://github.com/singingwolfboy/flask-dance-twitter-multi",
-  "repository": "https://github.com/singingwolfboy/flask-dance-twitter-Multi",
+  "website": "https://github.com/singingwolfboy/flask-dance-twitter-sqla",
+  "repository": "https://github.com/singingwolfboy/flask-dance-twitter-sqla",
   "env": {
     "FLASK_SECRET_KEY": {
       "description": "A secret key for verifying the integrity of signed cookies.",
