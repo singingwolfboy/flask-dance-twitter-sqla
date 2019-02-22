@@ -2,13 +2,13 @@ from flask import flash
 from flask_login import current_user, login_user
 from flask_dance.contrib.twitter import make_twitter_blueprint
 from flask_dance.consumer import oauth_authorized, oauth_error
-from flask_dance.consumer.backend.sqla import SQLAlchemyBackend
+from flask_dance.consumer.storage.sqla import SQLAlchemyStorage
 from sqlalchemy.orm.exc import NoResultFound
 from .models import db, User, OAuth
 
 
 blueprint = make_twitter_blueprint(
-    backend=SQLAlchemyBackend(OAuth, db.session, user=current_user)
+    storage=SQLAlchemyStorage(OAuth, db.session, user=current_user)
 )
 
 

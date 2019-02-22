@@ -47,7 +47,7 @@ so you don't need to reconfigure anything.
 
 Step 3: Create the database
 ---------------------------
-Since we're storing OAuth data in the SQLAlchemy backend, we need to
+Since we're storing OAuth data in the SQLAlchemy storage, we need to
 create the database to hold that data. Fortunately, this project includes
 basic command line support, so doing so is pretty straightforward.
 Run this code::

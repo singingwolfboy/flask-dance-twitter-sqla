@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin
-from flask_dance.consumer.backend.sqla import OAuthConsumerMixin
+from flask_dance.consumer.storage.sqla import OAuthConsumerMixin
 
 
 db = SQLAlchemy()
