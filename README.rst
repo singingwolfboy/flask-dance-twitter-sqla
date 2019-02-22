@@ -29,8 +29,8 @@ Step 2: Install code and dependencies
 -------------------------------------
 Run the following commands on your computer::
 
-    git clone https://github.com/singingwolfboy/flask-dance-twitter-multi.git
-    cd flask-dance-twitter-multi
+    git clone https://github.com/singingwolfboy/flask-dance-twitter-sqla.git
+    cd flask-dance-twitter-sqla
     python3 -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
